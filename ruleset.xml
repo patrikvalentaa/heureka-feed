@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Contributte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
+  <!-- Check only whitelist files -->
+  <arg name="extensions" value="php,phpt"/>
+
+  <!-- Enforce encoding -->
+  <arg name="encoding" value="utf-8"/>
+
+  <!-- Show progress -->
+  <arg value="ps"/>
+
+  <!-- Nice colors -->
+  <arg name="colors"/>
+
+  <!-- Strip filepaths to basepath -->
+  <arg name="basepath" value="./"/>
+
+  <!-- Feel the speed -->
+  <arg name="parallel" value="16"/>
+
+  <!-- Rulesets -->
+  <rule ref="./vendor/contributte/qa/ruleset-8.1.xml"/>
+  <!-- <rule ref="./vendor/contributte/qa/ruleset-8.0.xml"/> -->
+  <!-- <rule ref="./vendor/contributte/qa/ruleset-next.xml"/> -->
+
+  <!-- Rules -->
+  <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
+    <properties>
+      <property name="rootNamespaces" type="array">
+        <element key="src" value="PatrikValenta\HeurekaFeedPersonal"/>
+      </property>
+    </properties>
+  </rule>
+
+</ruleset>

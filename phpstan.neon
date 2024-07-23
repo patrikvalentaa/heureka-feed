@@ -1,0 +1,10 @@
+includes:
+	- vendor/contributte/phpstan/phpstan.neon
+parameters:
+	level: max
+	paths:
+		- src
+	fileExtensions:
+		- php
+	ignoreErrors:
+		- '/^Parameter #1 \$value of function strval expects bool\|float\|int\|resource\|string\|null, mixed given.$/' 
